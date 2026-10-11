@@ -1,0 +1,122 @@
+/* ===== WARNA & FONT ===== */
+:root{
+--paper:#f3f5fb;
+--white:#ffffff;
+--ink:#14172b;
+--muted:#4d5270;
+--indigo:#3b4bdb;
+--sun:#ffd24a;
+--line:#d9deef;
+}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.7}
+h1,h2,h3,.navbar-brand{font-family:'Bricolage Grotesque',system-ui,sans-serif;letter-spacing:-.02em}
+
+/* ===== NAVBAR ===== */
+.nav-cv{background:rgba(243,245,251,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav-cv .navbar-brand{color:var(--ink);font-weight:800}
+.logo{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50% 50% 8px 50%;
+background:var(--indigo);color:#fff;font-size:.85rem;font-weight:800}
+.logo{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50% 50% 8px 50%;
+background:var(--indigo);color:#fff;font-size:.85rem;font-weight:800}
+
+.logo-foto{
+width:38px;
+height:38px;
+border-radius:50%;
+object-fit:cover;
+object-position:50% 15%;
+border:2px solid var(--ink);
+background:#fff;
+}
+
+.nav-cv .nav-link{color:var(--ink);font-weight:500;border-radius:999px;padding:.4rem .9rem}
+.nav-cv .nav-link{color:var(--ink);font-weight:500;border-radius:999px;padding:.4rem .9rem}
+.nav-cv .nav-link:hover{background:var(--white)}
+.nav-cv .nav-cta{background:var(--ink);color:#fff;margin-left:.4rem}
+.nav-cv .nav-cta:hover{background:var(--indigo);color:#fff}
+
+/* ===== TOMBOL ===== */
+.btn{border-radius:999px;font-weight:700;padding:.7rem 1.5rem}
+.btn-sun{background:var(--sun);color:var(--ink);border:2px solid var(--sun)}
+.btn-sun:hover{background:#ffdf78;border-color:#ffdf78;color:var(--ink)}
+.btn-line{border:2px solid var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn-light-line{border:2px solid rgba(255,255,255,.7);color:#fff}
+.btn-light-line:hover{background:#fff;color:var(--ink)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--indigo);outline-offset:3px}
+.kontak a:focus-visible{outline-color:var(--sun)}
+
+/* ===== HERO ===== */
+.hero{
+padding:4.5rem 0 5rem;
+background:
+    linear-gradient(rgba(243,245,251,.85),rgba(243,245,251,.85)),
+    url("banner.png") center/cover no-repeat;
+}
+.hero-role{color:var(--indigo);font-weight:700;margin-bottom:.8rem}
+.hero-name{font-weight:800;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.05;margin-bottom:1.2rem}
+.hero-desc{font-size:1.2rem;color:var(--muted);max-width:34rem;margin-bottom:1.8rem}
+.foto-wrap{position:relative;width:min(320px,80%);aspect-ratio:3/4}
+.foto-wrap::before{content:"";position:absolute;inset:0;transform:translate(16px,16px);
+background:var(--sun);border-radius:999px 999px 28px 28px}
+.foto{position:relative;width:100%;height:100%;object-fit:cover;object-position:50% 12%;
+border-radius:999px 999px 28px 28px;border:4px solid var(--ink);background:#fff}
+
+/* ===== SECTION ===== */
+section{padding:4.5rem 0}
+section.alt{background:var(--white)}
+.judul{font-weight:800;font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:2rem}
+.sub{font-size:1.15rem;font-weight:700;margin-bottom:1rem}
+.isi{font-size:1.1rem;color:var(--muted);max-width:40rem}
+
+/* Info singkat */
+.info{margin:0;border-top:2px solid var(--ink)}
+.info div{display:flex;justify-content:space-between;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--line)}
+.info dt{font-weight:500;color:var(--muted)}
+.info dd{margin:0;font-weight:700;text-align:right}
+
+/* Pendidikan (urutan waktu) */
+.jalur{list-style:none;margin:0;padding:0;border-left:3px solid var(--ink)}
+.jalur li{position:relative;padding:0 0 2rem 1.8rem}
+.jalur li:last-child{padding-bottom:0}
+.jalur li::before{content:"";position:absolute;left:-10px;top:.35rem;width:17px;height:17px;
+border-radius:50%;background:var(--sun);border:3px solid var(--ink)}
+.tahun{display:inline-block;font-weight:700;color:var(--indigo)}
+.jalur h3{font-size:1.25rem;font-weight:700;margin:.1rem 0 .3rem}
+.jalur p{margin:0;color:var(--muted)}
+
+/* Keahlian */
+.skill li{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+padding:.85rem 0;border-bottom:1px solid var(--line);font-weight:500}
+.dots{position:relative;display:inline-block;flex:none;width:110px;height:14px;
+background:radial-gradient(circle at 7px 7px,var(--line) 6px,transparent 6.5px) 0 0/22px 14px repeat-x}
+.dots::after{content:"";position:absolute;left:0;top:0;bottom:0;width:calc(var(--n) * 22px);
+background:radial-gradient(circle at 7px 7px,var(--indigo) 6px,transparent 6.5px) 0 0/22px 14px repeat-x}
+.dots[data-n="3"]{--n:3}
+.dots[data-n="4"]{--n:4}
+.dots[data-n="5"]{--n:5}
+.chip{display:inline-block;margin:0 .4rem .5rem 0;padding:.35rem .9rem;border:2px solid var(--ink);
+border-radius:999px;font-weight:500;background:var(--white)}
+
+/* Proyek */
+.proyek{height:100%;padding:1.6rem;border-radius:24px 24px 24px 4px;border:2px solid var(--ink);
+display:flex;flex-direction:column}
+.proyek h3{font-size:1.3rem;font-weight:800}
+.proyek p{flex:1}
+.p-indigo{background:var(--indigo);color:#fff}
+.p-sun{background:var(--sun);color:var(--ink)}
+.p-ink{background:var(--ink);color:#fff}
+.tautan{color:inherit;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.tautan:hover{text-decoration-thickness:3px}
+
+/* Kontak (banner gambar) */
+.kontak{
+background:linear-gradient(rgba(20,23,43,.82),rgba(20,23,43,.82)),url("banner.png") center/cover no-repeat,#14172b;
+color:#fff;padding:5rem 0}
+.kontak-judul{font-weight:800;font-size:clamp(1.8rem,4.5vw,3rem);max-width:36rem;line-height:1.15}
+
+/* Footer */
+.footer-cv{background:var(--ink);color:#c9cde6;padding:1.4rem 0;text-align:center}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
